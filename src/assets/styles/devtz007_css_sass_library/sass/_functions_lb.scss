@@ -1,0 +1,7 @@
+@function complementaryColorF($baseColor) {
+    $hue: hue($baseColor);
+    $complementaryHue: if($hue > 180, $hue - 180, $hue + 180);
+    $complementaryColor: adjust-hue($baseColor, $complementaryHue);
+    @return $complementaryColor;
+}
+

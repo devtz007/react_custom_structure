@@ -1,0 +1,14 @@
+[
+  {
+    "name": "header-1-pagePart",
+    "location": {
+      "pagePart": "./src/components/header/header_3/header_3_pagePart.jsx"
+    }
+  },
+  {
+    "name": "search-box-1-pagePart",
+    "location": {
+      "pagePart": "./src/components/search_box/search_box_1/search_box_1_pagePart.jsx"
+    }
+  }
+]

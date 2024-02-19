@@ -1,0 +1,60 @@
+/*import fonts*/
+@font-face {
+  font-family: "source-sans-reg";
+  src: url("./assets/fonts/source_sans_pro/SourceSansPro-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "source-sans-bold";
+  src: url("./assets/fonts/source_sans_pro/SourceSansPro-Bold.woff2") format("woff2");
+}
+
+/*import sass */
+@import "./assets/styles/reusable/sass/sass_variables_ru";
+@import "./assets/styles/devtz007_css_sass_library/sass/_mixin_flex_lb";
+@import "./assets/styles/devtz007_css_sass_library/sass/_extend_lb";
+@import "./assets/styles/devtz007_css_sass_library/sass/_mixin_flex_lb";
+@import "./assets/styles/devtz007_css_sass_library/sass/_functions_lb";
+@import "./assets/styles/reusable/sass/style_ru";
+
+/*------------------------------------*\
+            html,body
+\*------------------------------------*/
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  @include flex-col-jc-ac;
+  position: relative;
+  top: 0;
+  left: 0;
+  font-size: 16px;
+  font-family: "source-sans-reg";
+  background-color: $--body-bgC;
+  overflow: hidden;
+
+  @media screen and (max-width: 750px) {
+    & {
+      font-size: 14px;
+    }
+  }
+}
+
+/*-------------------------*\
+   main
+\*-------------------------*/
+main {
+  @extend %--width-100;
+  height: calc(100vh - var(--header-height));
+  margin-top: var(--header-height);
+  //background-color: green;
+  overflow-y: auto;
+  width: 100vw;
+  @media screen and (max-width: 750px) {
+    @include flex-col;
+    flex-direction: column-reverse;
+  }
+}
